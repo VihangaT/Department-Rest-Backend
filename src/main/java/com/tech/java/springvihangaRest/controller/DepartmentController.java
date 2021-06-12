@@ -6,6 +6,7 @@ import com.tech.java.springvihangaRest.Services.DepartmentService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,6 +17,9 @@ import java.util.List;
 @RestController
 @RequestMapping("api/v1/department")
 public class DepartmentController {
+
+    @Value("${test.message}")
+    private String testMessage;
 
     @Autowired
     private DepartmentService departmentService;
@@ -64,6 +68,13 @@ public class DepartmentController {
     @GetMapping("/name/{name}")
     public Department getDepartmentByName(@PathVariable("name") String DepartmentName) throws DepartmentNotFoundException {
         return departmentService.getDepartmentByName(DepartmentName);
+    }
+
+    @GetMapping("/test/hellow")
+    public String HelloTester(){
+
+        return testMessage;
+
     }
 
 }
