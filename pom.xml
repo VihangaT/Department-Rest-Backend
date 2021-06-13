@@ -131,6 +131,10 @@
                                       todir="${basedir}/deploy/Department-Rest-Backend/configs"/>
                                 <copy file="${basedir}/src/main/resources/logback.xml"
                                       todir="${basedir}/deploy/Department-Rest-Backend/configs"/>
+                                <copy file="${basedir}/src/main/resources/start.bat"
+                                      todir="${basedir}/deploy/Department-Rest-Backend"/>
+                                <copy file="${basedir}/src/main/resources/start.sh"
+                                      todir="${basedir}/deploy/Department-Rest-Backend"/>
                             </tasks>
                         </configuration>
                         <goals>
