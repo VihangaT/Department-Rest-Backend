@@ -3,7 +3,9 @@ server:
 spring:
   profiles:
     active: dev
-
+#logging:
+#  level: root
+#  config: logback.xml
 ---
 spring:
   datasource:

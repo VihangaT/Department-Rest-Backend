@@ -67,6 +67,7 @@ public class DepartmentController {
 
     @GetMapping("/name/{name}")
     public Department getDepartmentByName(@PathVariable("name") String DepartmentName) throws DepartmentNotFoundException {
+        logger.info(String.format("Returned department with name %s",DepartmentName));
         return departmentService.getDepartmentByName(DepartmentName);
     }
 
