@@ -63,6 +63,11 @@
             <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+            <version>2.5.1</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -153,7 +158,7 @@
                             <includes>
                                 <include>**</include>
                             </includes>
-<!--                            <followSymLinks>false</followSymLinks>-->
+                            <!--                            <followSymLinks>false</followSymLinks>-->
                         </fileset>
                     </filesets>
                 </configuration>

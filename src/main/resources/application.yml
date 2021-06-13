@@ -6,6 +6,16 @@ spring:
 #logging:
 #  level: root
 #  config: logback.xml
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: "env,beans"
+
+
+
 ---
 spring:
   datasource:
@@ -24,7 +34,7 @@ spring:
     activate:
       on-profile: dev
 test:
-  message: '"Hellow World"'
+  message: "Hellow World"
 
 ---
 spring:
@@ -44,7 +54,7 @@ spring:
     activate:
       on-profile: Production
 test:
-  message: '"Hellow World"'
+  message: "Hellow World"
 
 ---
 spring:
@@ -64,4 +74,4 @@ spring:
     activate:
       on-profile: QA
 test:
-  message: '"Hellow World"'
+  message: "Hellow World"
