@@ -68,6 +68,16 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
             <version>2.5.1</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-log4j2</artifactId>
+        </dependency>
+        <!-- <dependency>
+            <groupId>com.spotify</groupId>
+            <artifactId>docker-client</artifactId>
+            <version>8.16.0</version>
+            <classifier>shaded</classifier>
+        </dependency> -->
     </dependencies>
 
     <build>
@@ -158,11 +168,45 @@
                             <includes>
                                 <include>**</include>
                             </includes>
-                            <!--                            <followSymLinks>false</followSymLinks>-->
+
                         </fileset>
                     </filesets>
                 </configuration>
             </plugin>
+            <!--            <plugin>-->
+            <!--                <groupId>com.spotify</groupId>-->
+            <!--                <artifactId>docker-maven-plugin</artifactId>-->
+            <!--                <executions>-->
+            <!--                    <execution>-->
+            <!--                        <id>default</id>-->
+            <!--                        <goals>-->
+            <!--                            <goal>build</goal>-->
+            <!--                            <goal>push</goal>-->
+            <!--                        </goals>-->
+            <!--                    </execution>-->
+            <!--                </executions>-->
+            <!--                <configuration>-->
+            <!--                    <repository>vihangat/vihanga-tech-repository/Department-Rest-App</repository>-->
+            <!--                    <tag>${project.version}</tag>-->
+            <!--                    <imageName>${project.name}:${project.version}</imageName>-->
+            <!--                    <baseImage>java</baseImage>-->
+            <!--                    <entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>-->
+            <!--                    <resources>-->
+            <!--                        <resource>-->
+            <!--                            <targetPath>/</targetPath>-->
+            <!--                            <directory>${project.build.directory}</directory>-->
+            <!--                            <include>${project.build.finalName}.jar</include>-->
+            <!--                        </resource>-->
+            <!--                    </resources>-->
+            <!--                </configuration>-->
+            <!--                <dependencies>-->
+            <!--                    <dependency>-->
+            <!--                        <groupId>javax.activation</groupId>-->
+            <!--                        <artifactId>activation</artifactId>-->
+            <!--                        <version>1.1.1</version>-->
+            <!--                    </dependency>-->
+            <!--                </dependencies>-->
+            <!--            </plugin>-->
         </plugins>
     </build>
 </project>
