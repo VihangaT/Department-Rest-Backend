@@ -1,4 +1,4 @@
 FROM openjdk:8-jre-alpine3.9
 COPY . /rest-department-api
-WORKDIR /rest-department-api/deploy/Department-Rest-Backend
+WORKDIR /rest-department-api
 CMD ["sh","start.sh"]
