@@ -1,4 +1,6 @@
+#updated
 FROM openjdk:8-jre-alpine3.9
-COPY . /rest-department-api
+RUN mvn clean install
+COPY ./deploy/Department-Rest-Backend /rest-department-api
 WORKDIR /rest-department-api
 CMD ["sh","start.sh"]
